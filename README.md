@@ -1,5 +1,5 @@
 # MathHelper - A Webapp for solving handwritten equations using CNN
-目前的版本能夠處理的一維算術表達式包括基本的加減乘除、 sin、cos、tan、 log、factorial 、pi，之後期待能夠實作出識別更加複雜的數學計算(次方、二元多次式)
+The current version is capable of handling one-dimensional arithmetic expressions, including basic addition, subtraction, multiplication, division, sine, cosine, tangent, logarithm, factorial, and pi. We aim to implement recognition for more complex mathematical calculations in the future, such as exponentiation and binomial polynomials.
 
 ## Dataset
 dataset from (https://www.kaggle.com/xainano/handwrittenmathsymbols) + (http://yann.lecun.com/exdb/mnist/)
@@ -8,10 +8,10 @@ dataset from (https://www.kaggle.com/xainano/handwrittenmathsymbols) + (http://y
 ![image](https://github.com/Tristaaaa/MathHelper/blob/main/test/overview.png)
 
 ### app.py(FRONTEND)
-以 flask 建立網頁，透過 p5.js 實作互動式 sketchpad，作為使用者和後端計算之間的介面
+Using Flask to build a webpage, implementing an interactive sketchpad with p5.js as an interface between the user and backend calculations.
 
 ### cnn.py(BACKEND)
-將輸入進來的照片進行 feature extraction 經由 segmentation 分離數字和符號，再各別進入 train 好的 CNN model 進行預測，然後將前面得到的算式利用 eval 函式將預測的 string 算出答案再回傳至前端
+The incoming photos will undergo feature extraction, followed by segmentation to separate digits and symbols. Each segment will then be fed into a pre-trained CNN model for prediction. Subsequently, the predicted strings will be evaluated using the eval function to compute the answers, which will be returned to the frontend.
 
 ### model
 pretrained model of the CNN
